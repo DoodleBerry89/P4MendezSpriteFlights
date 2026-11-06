@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9015512475056063110, guid: d111193942a764e49affb159dcd09fa1, type: 3}
   m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
@@ -199,3 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d31dac6b57a4b46928dbd969d91e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  minSize: 0.5
+  maxSize: 2
+  minSpeed: 50
+  maxSpeed: 150
+  maxSpinSpeed: 10
