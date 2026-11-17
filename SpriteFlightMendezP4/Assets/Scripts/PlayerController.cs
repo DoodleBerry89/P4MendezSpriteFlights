@@ -26,24 +26,25 @@ public class PlayerController : MonoBehaviour
         {
             boosterFlame.SetActive(false);
         }
-        
+
         {
 
             // Calculalte mouse direction
-            Vector3 mousePos =  Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.value);
             Vector2 direction = (mousePos - transform.position).normalized;
 
             // Move player in the direction of mouse
+
             transform.up = direction;
             rb.AddForce(direction * thrustForce);
-            
+
         }
+
+        void OnCollisionEnter2D(Collision2D collision)
+        {
+            Destroy(gameObject);
+        }
+
+
     }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);        
-    }
-
-
 }

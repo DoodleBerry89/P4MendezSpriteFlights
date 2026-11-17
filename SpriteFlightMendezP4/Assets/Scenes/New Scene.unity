@@ -499,12 +499,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255528314}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -6.24, z: 0}
-  m_LocalScale: {x: 0.5, y: -0.5, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.013333334, y: -1.6533331, z: 0}
+  m_LocalScale: {x: 0.6666667, y: -0.6666667, z: 0.6666667}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1739256414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &271717164
 PrefabInstance:
@@ -1050,7 +1050,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3255651684209743140, guid: 4dfb6259edf983344a58f5c0accd8f4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 255528316}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2761803239491593851, guid: 4dfb6259edf983344a58f5c0accd8f4d, type: 3}
       insertIndex: -1
@@ -1689,6 +1692,11 @@ MonoBehaviour:
   boosterFlame: {fileID: 0}
   maxSpeed: 5
   thrustForce: 3
+--- !u!4 &1739256414 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3255651684209743140, guid: 4dfb6259edf983344a58f5c0accd8f4d, type: 3}
+  m_PrefabInstance: {fileID: 677168736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1779998577 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9112904970754369617, guid: 5b7f0dc46d67c4741b88e38bc8750afb, type: 3}
@@ -1903,4 +1911,3 @@ SceneRoots:
   - {fileID: 140990135}
   - {fileID: 981694721}
   - {fileID: 677168736}
-  - {fileID: 255528316}
