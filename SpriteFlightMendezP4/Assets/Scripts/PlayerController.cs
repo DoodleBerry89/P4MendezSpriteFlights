@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public GameObject boosterFlame;
+    public GameObject BoosterFlame;
     public float maxSpeed = 5f;
     public float thrustForce = 5f;
     Rigidbody2D rb;
@@ -20,13 +19,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Mouse.current.leftButton.isPressed) if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            boosterFlame.SetActive(true);
+            BoosterFlame.SetActive(true);
         }
         else if (Mouse.current.leftButton.wasReleasedThisFrame)
         {
-            boosterFlame.SetActive(false);
+            BoosterFlame.SetActive(false);
         }
-
+        if (Mouse.current.leftButton.isPressed)
         {
 
             // Calculalte mouse direction
@@ -38,7 +37,13 @@ public class PlayerController : MonoBehaviour
             transform.up = direction;
             rb.AddForce(direction * thrustForce);
 
+            if (rb.linearVelocity.magnitude > maxSpeed)
+            {
+                rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+            }
         }
+
+
 
         void OnCollisionEnter2D(Collision2D collision)
         {
@@ -47,4 +52,5 @@ public class PlayerController : MonoBehaviour
 
 
     }
+
 }
